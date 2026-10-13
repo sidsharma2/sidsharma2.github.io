@@ -742,6 +742,9 @@ a.inline{color:var(--accent);border-bottom:1px solid currentColor}
 .op-table{margin-bottom:18px}
 .op-sum{border-left:3px solid var(--accent);padding:10px 0 10px 18px;background:var(--card)}
 .op-prose .eq{max-width:68ch}
+/* v13 · SVG gallery slides: vector figures declare a small intrinsic size, so scale them to fill the
+   16:9 slide (object-fit keeps the aspect ratio). Raster slides are unchanged. */
+.carousel .slide.contain img[src$=".svg"]{width:100%!important;height:100%!important;max-width:none;max-height:none;object-fit:contain!important;padding:10px}
 </style>
 </head>
 <body>
