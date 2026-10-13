@@ -718,6 +718,14 @@ a.inline{color:var(--accent);border-bottom:1px solid currentColor}
   .hero-cta{margin-top:24px;gap:10px}
   .hero-cta .btn.primary,.hero-cta .btn.ghost{flex:1 1 100%;justify-content:center}
 }
+/* v11 · home: one-line link box to the independent computational studies (2026-10-13) */
+.compute-box{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-top:28px;padding:16px 22px;border:1px solid var(--line-2);background:var(--card);color:var(--ink);transition:border-color .18s}
+.compute-box:hover,.compute-box:focus-visible{border-color:var(--accent)}
+.compute-box .cb-k{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-2);white-space:nowrap}
+.compute-box .cb-t{flex:1 1 300px;min-width:0;font-size:15px;color:var(--ink-2)}
+.compute-box .cb-ar{color:var(--accent);font-size:18px;transition:transform .18s}
+.compute-box:hover .cb-ar{transform:translateX(4px)}
+@media(max-width:560px){.compute-box{gap:8px 12px;padding:14px 16px}.compute-box .cb-t{flex-basis:100%;order:3}}
 </style>
 </head>
 <body>
