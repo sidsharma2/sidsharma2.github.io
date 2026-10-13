@@ -698,6 +698,26 @@ a.inline{color:var(--accent);border-bottom:1px solid currentColor}
 .wpair .wfig{min-width:0;width:auto;margin:4px 0}
 .wpair .wfig img{width:100%;height:auto;max-height:none}
 @media(max-width:700px){.wpair{flex-direction:column;align-items:stretch}.wpair .wfig{flex:none!important;width:100%;max-width:100%}.wpair .wfig img{width:100%;height:auto;max-height:none}}
+/* v10 · home hero on tablets and phones (2026-10-13). Must come last: the v6 rule .hero-split{grid-template-columns:...}
+   (line ~346) used to override the 860 px single-column rule, which squeezed the text beside the portrait on phones. */
+@media(max-width:860px){
+  .hero-split{grid-template-columns:1fr;gap:32px;align-items:start}
+  .hero-portrait{max-width:300px}
+}
+@media(max-width:560px){
+  .hero{padding-top:40px;padding-bottom:56px}
+  .hero .kicker{display:none}
+  .hero-split{gap:22px}
+  .hero-portrait{order:-1;max-width:none;display:grid;grid-template-columns:104px minmax(0,1fr);gap:16px;align-items:center}
+  .hero-portrait img{box-shadow:none}
+  .hero-portrait figcaption{flex-direction:column;justify-content:center;gap:6px;border-bottom:0;padding:0;line-height:1.5}
+  .kicker{margin-bottom:18px;gap:10px}
+  .kicker .rule{flex-basis:22px}
+  .hero-split h1{font-size:clamp(32px,9.6vw,42px);max-width:none;margin-bottom:18px}
+  .hero .sub{font-size:16.5px}
+  .hero-cta{margin-top:24px;gap:10px}
+  .hero-cta .btn.primary,.hero-cta .btn.ghost{flex:1 1 100%;justify-content:center}
+}
 </style>
 </head>
 <body>
