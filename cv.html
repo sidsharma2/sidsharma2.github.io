@@ -692,6 +692,12 @@ a.inline{color:var(--accent);border-bottom:1px solid currentColor}
 .math-more .mm-ar{font-size:20px;line-height:1;color:var(--accent);transition:transform .2s}
 .math-more[open] .mm-ar{transform:rotate(45deg)}
 .math-more[open]>summary{margin-bottom:14px}
+/* v9 · justified figure pairs (2026-10-13): each figure's width follows its aspect ratio (inline flex-grow
+   from cardkit.figpair), so both images show at the same height with no white bands */
+.wpair{display:flex;gap:14px;align-items:flex-start;margin-inline:auto;width:100%}
+.wpair .wfig{min-width:0;width:auto;margin:4px 0}
+.wpair .wfig img{width:100%;height:auto;max-height:none}
+@media(max-width:700px){.wpair{flex-direction:column;align-items:stretch}.wpair .wfig{flex:none!important;width:100%;max-width:100%}.wpair .wfig img{width:100%;height:auto;max-height:none}}
 </style>
 </head>
 <body>
