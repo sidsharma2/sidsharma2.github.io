@@ -745,6 +745,12 @@ a.inline{color:var(--accent);border-bottom:1px solid currentColor}
 /* v13 · SVG gallery slides: vector figures declare a small intrinsic size, so scale them to fill the
    16:9 slide (object-fit keeps the aspect ratio). Raster slides are unchanged. */
 .carousel .slide.contain img[src$=".svg"]{width:100%!important;height:100%!important;max-width:none;max-height:none;object-fit:contain!important;padding:10px}
+/* v14 · interactive anatomy explainers, inlined from tools/figsrc (scoped .iso-* / .pb-* styles): the plate
+   sizes itself to its box, so the frame needs a real width (.wfig is fit-content). */
+.wfig.wexp{width:100%;max-width:760px;margin-inline:auto}
+.wexp>.pb-embed{padding:12px}
+@media (max-width:560px){.wexp>.pb-embed{padding:0}}
+
 </style>
 </head>
 <body>
