@@ -762,6 +762,19 @@ a.inline{color:var(--accent);border-bottom:1px solid currentColor}
 .int-tab .it-s{font-size:14px;color:var(--ink-2)}
 .int-tab[aria-selected="false"] .it-t{color:var(--ink-2)}
 .int-intro{border-top:none;padding-top:28px}
+/* v18: two reading levels on the research interests page — a short brief, then the full detail behind a button */
+.brief-sec{padding-top:8px}
+.brief{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.brief .bc{border:1px solid var(--line-2);background:var(--card);padding:20px 22px}
+.brief .bc .bk{font:11px "IBM Plex Mono",monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-2);margin-bottom:8px}
+.brief .bc p{font-size:15.5px;line-height:1.6;color:var(--ink)}
+.brief .bc.wide{grid-column:1/-1;border-color:var(--accent-2);background:var(--paper)}
+.deep-cta{display:flex;justify-content:center;margin:30px 0 4px}
+.deep-cta .btn{font-family:inherit;border:0}
+.deep-toggle .ar{display:inline-block;transition:transform .2s}
+.deep-toggle[aria-expanded="true"] .ar{transform:rotate(180deg)}
+@media(max-width:760px){.brief{grid-template-columns:1fr}}
+.feature .body .actions{display:flex;flex-wrap:wrap;gap:10px}
 /* v17: Schmidt–Appleman table — keep units in their own case, align the numbers */
 .datatable.sac-table thead th{text-transform:none;letter-spacing:.02em;font-size:13px}
 .sac-table td:not(.k),.sac-table th:not(:first-child){text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
