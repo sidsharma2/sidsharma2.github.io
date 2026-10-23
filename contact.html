@@ -751,6 +751,31 @@ a.inline{color:var(--accent);border-bottom:1px solid currentColor}
 .wexp>.pb-embed{padding:12px}
 @media (max-width:560px){.wexp>.pb-embed{padding:0}}
 
+/* v15 · Research interests: two interests behind a tab switcher (tools/proposed_interests.py) */
+.int-switch-sec{padding:36px 0 8px;border-top:none;scroll-margin-top:76px}
+.int-switch{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.int-tab{display:flex;flex-direction:column;gap:6px;text-align:left;padding:20px 22px;border:1px solid var(--line-2);background:var(--card);color:var(--ink);font:inherit;cursor:pointer;transition:border-color .18s,box-shadow .18s}
+.int-tab:hover,.int-tab:focus-visible{border-color:var(--accent)}
+.int-tab[aria-selected="true"]{border-color:var(--accent);box-shadow:inset 0 3px 0 var(--accent)}
+.int-tab .it-n{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-2)}
+.int-tab .it-t{font-family:"Newsreader",serif;font-size:21px;line-height:1.25}
+.int-tab .it-s{font-size:14px;color:var(--ink-2)}
+.int-tab[aria-selected="false"] .it-t{color:var(--ink-2)}
+.int-intro{border-top:none;padding-top:28px}
+/* v17: Schmidt–Appleman table — keep units in their own case, align the numbers */
+.datatable.sac-table thead th{text-transform:none;letter-spacing:.02em;font-size:13px}
+.sac-table td:not(.k),.sac-table th:not(:first-child){text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.sac-table td:not(.k){font-family:"IBM Plex Mono",monospace;font-size:14px}
+/* v16: power-setting switch on the measured size-distribution figure (CSS only) */
+.psd-fig>input{position:absolute;opacity:0;pointer-events:none}
+.psd-tabs{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:0 0 12px}
+.psd-tabs .pt-k{font:11px "IBM Plex Mono",monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);margin-right:4px}
+.psd-tabs label{font:13px "IBM Plex Mono",monospace;padding:5px 12px;border:1px solid var(--line-2);background:var(--card);color:var(--ink-2);cursor:pointer}
+.psd-fig .psd-g{display:none}
+#psd-p80:checked~svg .psd-g80,#psd-p90:checked~svg .psd-g90,#psd-p100:checked~svg .psd-g100{display:inline}
+#psd-p80:checked~.psd-tabs label[for=psd-p80],#psd-p90:checked~.psd-tabs label[for=psd-p90],#psd-p100:checked~.psd-tabs label[for=psd-p100]{border-color:var(--accent);color:var(--ink);box-shadow:inset 0 -2px 0 var(--accent)}
+#psd-p80:focus-visible~.psd-tabs label[for=psd-p80],#psd-p90:focus-visible~.psd-tabs label[for=psd-p90],#psd-p100:focus-visible~.psd-tabs label[for=psd-p100]{outline:2px solid var(--accent);outline-offset:2px}
+@media(max-width:700px){.int-switch{grid-template-columns:1fr;gap:10px}.int-tab{padding:14px 18px}.int-tab .it-t{font-size:18px}.int-tab .it-s{display:none}}
 </style>
 </head>
 <body>
