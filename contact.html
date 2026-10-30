@@ -75,7 +75,7 @@ header.nav { position: sticky; top: 0; z-index: 50; background: rgba(244,241,234
 .kicker { display: flex; align-items: center; gap: 14px; margin-bottom: 28px; }
 .kicker .rule { flex: 0 0 44px; height: 1px; background: var(--line-2); }
 .hero h1 { font-size: clamp(38px, 5.6vw, 72px); font-weight: 400; max-width: 17ch; margin-bottom: 26px; }
-.hero h1 em { font-style: italic; color: var(--accent); }
+.hero h1 em { font-style: normal; color: var(--accent); }
 .hero .sub { font-size: clamp(17px, 1.5vw, 20px); color: var(--ink-2); max-width: 64ch; text-wrap: pretty; }
 .hero-cta { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 38px; align-items: center; }
 
@@ -108,7 +108,7 @@ header.nav { position: sticky; top: 0; z-index: 50; background: rgba(244,241,234
 .page-hero .crumb { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--ink-3); letter-spacing: 0.08em; margin-bottom: 18px; }
 .page-hero .crumb a:hover { color: var(--accent); }
 .page-hero h1 { font-size: clamp(34px, 4.6vw, 56px); font-weight: 400; max-width: 18ch; }
-.page-hero h1 em { font-style: italic; color: var(--accent); }
+.page-hero h1 em { font-style: normal; color: var(--accent); }
 .page-hero .lead { font-size: clamp(16px, 1.4vw, 19px); color: var(--ink-2); max-width: 62ch; margin-top: 20px; text-wrap: pretty; }
 
 /* ---------- section scaffold ---------- */
@@ -226,7 +226,7 @@ header.nav { position: sticky; top: 0; z-index: 50; background: rgba(244,241,234
 /* ---------- contact ---------- */
 .contact-band { background: var(--paper-2); }
 .contact-lead { font-family: "Newsreader", serif; font-size: clamp(24px, 3vw, 36px); font-weight: 400; line-height: 1.4; max-width: 24ch; margin-bottom: 8px; }
-.contact-lead em { font-style: italic; color: var(--accent); }
+.contact-lead em { font-style: normal; color: var(--accent); }
 .contact-body { color: var(--ink-2); font-size: 17px; max-width: 60ch; margin-bottom: 40px; text-wrap: pretty; }
 .links { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
 .links a { background: var(--card); border: 1px solid var(--line); padding: 18px; transition: all .18s; }
@@ -433,7 +433,7 @@ a.inline{color:var(--accent);border-bottom:1px solid currentColor}
 .step{padding:28px 26px;background:var(--card);position:relative}
 .step+.step{border-left:1px solid var(--line)}
 .sn{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--ink-3)}
-.sk{font-family:"Newsreader",serif;font-style:italic;font-size:34px;color:var(--accent);margin:4px 0 6px}
+.sk{font-family:"Newsreader",serif;font-style:normal;font-size:34px;color:var(--accent);margin:4px 0 6px}
 .step h3{font-size:19px;font-weight:500;margin-bottom:12px}
 .step ul{list-style:none;display:flex;flex-direction:column;gap:9px}
 .step li{font-size:14.5px;color:var(--ink-2);padding-left:14px;position:relative}
@@ -698,6 +698,9 @@ a.inline{color:var(--accent);border-bottom:1px solid currentColor}
 .wpair .wfig{min-width:0;width:auto;margin:4px 0}
 .wpair .wfig img{width:100%;height:auto;max-height:none}
 @media(max-width:700px){.wpair{flex-direction:column;align-items:stretch}.wpair .wfig{flex:none!important;width:100%;max-width:100%}.wpair .wfig img{width:100%;height:auto;max-height:none}}
+/* Upright display emphasis; mathematical italics keep their own styles. */
+h1 em, h2 em, h3 em, .mp-banner em { font-style: normal; }
+
 /* v10 · home hero on tablets and phones (2026-10-13). Must come last: the v6 rule .hero-split{grid-template-columns:...}
    (line ~346) used to override the 860 px single-column rule, which squeezed the text beside the portrait on phones. */
 @media(max-width:860px){
@@ -804,7 +807,7 @@ a.inline{color:var(--accent);border-bottom:1px solid currentColor}
 <section class="sec contact-band" data-screen-label="Contact body">
   <div class="wrap">
     <div class="contact-lead">Open to research collaboration & <em>PhD opportunities</em>.</div>
-    <p class="contact-body">Aerospace propulsion and emissions projects, conference discussions, and industry / government research partnerships across sustainable aviation fuels, emissions characterization, combustion modeling, aerosols, and thermofluids.</p>
+    <p class="contact-body">I welcome discussions about propulsion and emissions research, including at conferences and through industry or government partnerships. My interests include sustainable aviation fuels, emissions characterization, combustion modeling, aerosols and thermofluids.</p>
     <div class="links"><a href="mailto:sid.sharma@ubc.ca"><span class="k">Email</span><span class="v">sid.sharma@ubc.ca</span></a><a href="https://linkedin.com/in/sid-sharma2" target="_blank" rel="noopener"><span class="k">LinkedIn</span><span class="v">in/sid-sharma2 ↗</span></a><a href="https://github.com/sidsharma2" target="_blank" rel="noopener"><span class="k">GitHub</span><span class="v">sidsharma2 ↗</span></a><a href="cv.html"><span class="k">CV</span><span class="v">View or download</span></a><a href="https://orcid.org/0009-0001-5348-1720" target="_blank" rel="noopener"><span class="k">ORCID</span><span class="v">0009-0001-5348-1720</span></a><a href="https://www.researchgate.net/profile/Siddharth-Sharma-112" target="_blank" rel="noopener"><span class="k">ResearchGate</span><span class="v">Siddharth Sharma</span></a></div></div></section>
 
 <footer><div class="wrap"><div class="foot-in"><div class="col"><div class="h">Research</div><a href="about.html">About</a><a href="research.html">Research</a><a href="proposed.html">Research interests</a><a href="publications.html">Publications</a></div><div class="col"><div class="h">More</div><a href="projects.html">Projects</a><a href="library.html">Library</a><a href="beyond.html">Beyond the Lab</a><a href="cv.html">CV</a></div><div class="col"><div class="h">Profiles</div><a href="https://linkedin.com/in/sid-sharma2" target="_blank" rel="noopener">LinkedIn</a><a href="https://github.com/sidsharma2" target="_blank" rel="noopener">GitHub</a><a href="https://orcid.org/0009-0001-5348-1720" target="_blank" rel="noopener">ORCID</a><a href="https://www.researchgate.net/profile/Siddharth-Sharma-112" target="_blank" rel="noopener">ResearchGate</a></div><div class="col"><div class="h">Contact</div><a href="mailto:sid.sharma@ubc.ca">sid.sharma@ubc.ca</a><span>UBC Clean Energy Research Centre</span><span>Vancouver, BC</span></div></div><div class="foot-note"><div>© 2026 Siddharth Sharma · Aerospace Propulsion &amp; Emissions Research</div><div>UBC · TU Braunschweig · Tampere · SKKU</div></div></div></footer>

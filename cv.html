@@ -75,7 +75,7 @@ header.nav { position: sticky; top: 0; z-index: 50; background: rgba(244,241,234
 .kicker { display: flex; align-items: center; gap: 14px; margin-bottom: 28px; }
 .kicker .rule { flex: 0 0 44px; height: 1px; background: var(--line-2); }
 .hero h1 { font-size: clamp(38px, 5.6vw, 72px); font-weight: 400; max-width: 17ch; margin-bottom: 26px; }
-.hero h1 em { font-style: italic; color: var(--accent); }
+.hero h1 em { font-style: normal; color: var(--accent); }
 .hero .sub { font-size: clamp(17px, 1.5vw, 20px); color: var(--ink-2); max-width: 64ch; text-wrap: pretty; }
 .hero-cta { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 38px; align-items: center; }
 
@@ -108,7 +108,7 @@ header.nav { position: sticky; top: 0; z-index: 50; background: rgba(244,241,234
 .page-hero .crumb { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--ink-3); letter-spacing: 0.08em; margin-bottom: 18px; }
 .page-hero .crumb a:hover { color: var(--accent); }
 .page-hero h1 { font-size: clamp(34px, 4.6vw, 56px); font-weight: 400; max-width: 18ch; }
-.page-hero h1 em { font-style: italic; color: var(--accent); }
+.page-hero h1 em { font-style: normal; color: var(--accent); }
 .page-hero .lead { font-size: clamp(16px, 1.4vw, 19px); color: var(--ink-2); max-width: 62ch; margin-top: 20px; text-wrap: pretty; }
 
 /* ---------- section scaffold ---------- */
@@ -226,7 +226,7 @@ header.nav { position: sticky; top: 0; z-index: 50; background: rgba(244,241,234
 /* ---------- contact ---------- */
 .contact-band { background: var(--paper-2); }
 .contact-lead { font-family: "Newsreader", serif; font-size: clamp(24px, 3vw, 36px); font-weight: 400; line-height: 1.4; max-width: 24ch; margin-bottom: 8px; }
-.contact-lead em { font-style: italic; color: var(--accent); }
+.contact-lead em { font-style: normal; color: var(--accent); }
 .contact-body { color: var(--ink-2); font-size: 17px; max-width: 60ch; margin-bottom: 40px; text-wrap: pretty; }
 .links { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
 .links a { background: var(--card); border: 1px solid var(--line); padding: 18px; transition: all .18s; }
@@ -433,7 +433,7 @@ a.inline{color:var(--accent);border-bottom:1px solid currentColor}
 .step{padding:28px 26px;background:var(--card);position:relative}
 .step+.step{border-left:1px solid var(--line)}
 .sn{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--ink-3)}
-.sk{font-family:"Newsreader",serif;font-style:italic;font-size:34px;color:var(--accent);margin:4px 0 6px}
+.sk{font-family:"Newsreader",serif;font-style:normal;font-size:34px;color:var(--accent);margin:4px 0 6px}
 .step h3{font-size:19px;font-weight:500;margin-bottom:12px}
 .step ul{list-style:none;display:flex;flex-direction:column;gap:9px}
 .step li{font-size:14.5px;color:var(--ink-2);padding-left:14px;position:relative}
@@ -698,6 +698,9 @@ a.inline{color:var(--accent);border-bottom:1px solid currentColor}
 .wpair .wfig{min-width:0;width:auto;margin:4px 0}
 .wpair .wfig img{width:100%;height:auto;max-height:none}
 @media(max-width:700px){.wpair{flex-direction:column;align-items:stretch}.wpair .wfig{flex:none!important;width:100%;max-width:100%}.wpair .wfig img{width:100%;height:auto;max-height:none}}
+/* Upright display emphasis; mathematical italics keep their own styles. */
+h1 em, h2 em, h3 em, .mp-banner em { font-style: normal; }
+
 /* v10 · home hero on tablets and phones (2026-10-13). Must come last: the v6 rule .hero-split{grid-template-columns:...}
    (line ~346) used to override the 860 px single-column rule, which squeezed the text beside the portrait on phones. */
 @media(max-width:860px){
@@ -793,7 +796,7 @@ a.inline{color:var(--accent);border-bottom:1px solid currentColor}
 </head>
 <body>
 <header class="nav"><div class="wrap nav-in"><a href="index.html" class="brand">Sid Sharma<span class="dot">.</span></a><button class="nav-toggle" type="button" aria-label="Menu">Menu</button><nav class="nav-links"><a href="about.html">About</a><a href="research.html">Research</a><a href="proposed.html">Research Interests</a><a href="projects.html">Projects</a><a href="publications.html">Publications</a><a href="library.html">Library</a><a href="beyond.html">Beyond the Lab</a><a href="contact.html">Contact</a></nav><a href="cv.html" class="nav-cta on">CV</a></div></header>
-<section class="page-hero" data-screen-label="CV header"><div class="wrap"><div class="crumb"><a href="index.html">Home</a> / CV</div><div class="cv-head"><div><h1>Curriculum <em>vitae</em></h1><p class="lead">The full CV as a PDF, with the same content broken down below.</p></div><div class="cv-actions"><a href="#" class="btn primary" data-view="pdf" data-src="docs/cv.pdf" data-title="Siddharth Sharma — CV">View CV</a><a href="docs/cv.pdf" class="btn ghost" download>Download PDF ↓</a></div></div></div></section>
+<section class="page-hero" data-screen-label="CV header"><div class="wrap"><div class="crumb"><a href="index.html">Home</a> / CV</div><div class="cv-head"><div><h1>Curriculum <em>vitae</em></h1><p class="lead">Download the full CV or read about my education and experience below.</p></div><div class="cv-actions"><a href="#" class="btn primary" data-view="pdf" data-src="docs/cv.pdf" data-title="Siddharth Sharma — CV">View CV</a><a href="docs/cv.pdf" class="btn ghost" download>Download PDF ↓</a></div></div></div></section>
 <nav class="subnav"><div class="wrap"><a href="#education">Education</a><a href="#research-exp">Research</a><a href="#pubs">Publications</a><a href="#projects">Projects</a><a href="#experience">Industry</a><a href="#teaching">Leadership &amp; teaching</a><a href="#skills">Skills</a><a href="#interests">Interests</a></div></nav>
 <section class="sec" id="education" data-screen-label="Education"><div class="wrap"><div class="cv-sec"><div class="eyebrow">Education</div><div class="tls">
 <div class="tl"><div class="tw">2025 – 2027</div><div class="tb"><h3>MASc, Mechanical Engineering</h3><div class="tp">University of British Columbia · Energy &amp; Environment</div><p>GPA 3.95 / 4.33 · Supervisor Dr. Steven Rogak · Sustainable aviation propulsion, gas-turbine emissions, experimental thermofluids</p></div></div>

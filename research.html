@@ -75,7 +75,7 @@ header.nav { position: sticky; top: 0; z-index: 50; background: rgba(244,241,234
 .kicker { display: flex; align-items: center; gap: 14px; margin-bottom: 28px; }
 .kicker .rule { flex: 0 0 44px; height: 1px; background: var(--line-2); }
 .hero h1 { font-size: clamp(38px, 5.6vw, 72px); font-weight: 400; max-width: 17ch; margin-bottom: 26px; }
-.hero h1 em { font-style: italic; color: var(--accent); }
+.hero h1 em { font-style: normal; color: var(--accent); }
 .hero .sub { font-size: clamp(17px, 1.5vw, 20px); color: var(--ink-2); max-width: 64ch; text-wrap: pretty; }
 .hero-cta { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 38px; align-items: center; }
 
@@ -108,7 +108,7 @@ header.nav { position: sticky; top: 0; z-index: 50; background: rgba(244,241,234
 .page-hero .crumb { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--ink-3); letter-spacing: 0.08em; margin-bottom: 18px; }
 .page-hero .crumb a:hover { color: var(--accent); }
 .page-hero h1 { font-size: clamp(34px, 4.6vw, 56px); font-weight: 400; max-width: 18ch; }
-.page-hero h1 em { font-style: italic; color: var(--accent); }
+.page-hero h1 em { font-style: normal; color: var(--accent); }
 .page-hero .lead { font-size: clamp(16px, 1.4vw, 19px); color: var(--ink-2); max-width: 62ch; margin-top: 20px; text-wrap: pretty; }
 
 /* ---------- section scaffold ---------- */
@@ -226,7 +226,7 @@ header.nav { position: sticky; top: 0; z-index: 50; background: rgba(244,241,234
 /* ---------- contact ---------- */
 .contact-band { background: var(--paper-2); }
 .contact-lead { font-family: "Newsreader", serif; font-size: clamp(24px, 3vw, 36px); font-weight: 400; line-height: 1.4; max-width: 24ch; margin-bottom: 8px; }
-.contact-lead em { font-style: italic; color: var(--accent); }
+.contact-lead em { font-style: normal; color: var(--accent); }
 .contact-body { color: var(--ink-2); font-size: 17px; max-width: 60ch; margin-bottom: 40px; text-wrap: pretty; }
 .links { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
 .links a { background: var(--card); border: 1px solid var(--line); padding: 18px; transition: all .18s; }
@@ -433,7 +433,7 @@ a.inline{color:var(--accent);border-bottom:1px solid currentColor}
 .step{padding:28px 26px;background:var(--card);position:relative}
 .step+.step{border-left:1px solid var(--line)}
 .sn{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--ink-3)}
-.sk{font-family:"Newsreader",serif;font-style:italic;font-size:34px;color:var(--accent);margin:4px 0 6px}
+.sk{font-family:"Newsreader",serif;font-style:normal;font-size:34px;color:var(--accent);margin:4px 0 6px}
 .step h3{font-size:19px;font-weight:500;margin-bottom:12px}
 .step ul{list-style:none;display:flex;flex-direction:column;gap:9px}
 .step li{font-size:14.5px;color:var(--ink-2);padding-left:14px;position:relative}
@@ -698,6 +698,9 @@ a.inline{color:var(--accent);border-bottom:1px solid currentColor}
 .wpair .wfig{min-width:0;width:auto;margin:4px 0}
 .wpair .wfig img{width:100%;height:auto;max-height:none}
 @media(max-width:700px){.wpair{flex-direction:column;align-items:stretch}.wpair .wfig{flex:none!important;width:100%;max-width:100%}.wpair .wfig img{width:100%;height:auto;max-height:none}}
+/* Upright display emphasis; mathematical italics keep their own styles. */
+h1 em, h2 em, h3 em, .mp-banner em { font-style: normal; }
+
 /* v10 · home hero on tablets and phones (2026-10-13). Must come last: the v6 rule .hero-split{grid-template-columns:...}
    (line ~346) used to override the 860 px single-column rule, which squeezed the text beside the portrait on phones. */
 @media(max-width:860px){
@@ -807,13 +810,13 @@ a.inline{color:var(--accent);border-bottom:1px solid currentColor}
 <section class="sec" id="motivation" data-screen-label="Motivation">
   <div class="wrap">
     <div class="sec-head"><div class="eyebrow">Why it matters</div><h2>Why a micro-turbojet</h2></div>
-    <p class="mp-banner">Pollutant formation, and the climate impact that follows, is highly sensitive to fuel chemistry and operating point. <em>Studying those sensitivities needs a controlled platform and a tractable, physics-informed approach.</em></p>
+    <p class="mp-banner">Fuel chemistry and engine operating point affect pollutant formation and its climate impact. <em>I study those sensitivities through controlled experiments and physics-based models.</em></p>
     <div class="mpanel"><div class="mp-col mp-chal"><div class="mp-h">The challenge</div><img src="fig/turbofan-cutaway-tint.png" alt="Full-scale turbofan cutaway" loading="lazy"><div class="mp-body"><p class="mp-lead">Characterizing SAFs on a full-scale turbofan is:</p><ul><li><b>Highly regulated</b></li><li><b>Fuel-hungry</b>: tens of thousands of litres per campaign</li><li><b>Very expensive</b></li></ul></div></div><div class="mp-arrow" aria-hidden="true">→</div><div class="mp-col mp-rig"><div class="mp-h">Micro-turbojet (MTJ) test rig</div><img src="fig/mtj-rig-stand.jpg" alt="JetCat P200-SX on the instrumented stand" loading="lazy"><div class="mp-body"><p class="mp-lead">A cost-effective, controlled platform:</p><ul><li>Repeatable, back-to-back experiments</li><li>Modest fuel use across the whole operating envelope</li><li>At maximum thrust, combustor-inlet temperature and pressure are close to a turbofan at idle</li></ul></div></div></div>
     <div class="twocol" style="margin-top:34px;">
       <div>
         <div class="prose">
           <p>Aviation contributes an estimated 3–5% of global anthropogenic climate forcing. More than half of that impact comes from <strong>non-CO₂ effects</strong>: NOₓ chemistry, soot acting as ice-nucleating particles, and contrail cirrus. CO₂ alone is an incomplete proxy for aviation’s total impact <span class="cite">[<a href="#ref-1">1</a>]</span>.</p>
-          <p>Pollutant formation depends on fuel chemistry and on the engine operating point, yet experiments on full-scale turbofans are expensive, logistically complex and tightly regulated. My work uses a controlled micro-turbojet to measure those sensitivities at tractable cost. A reactor-network model from our collaborators helps explain them <span class="cite">[<a href="#ref-1">1</a>]</span>.</p>
+          <p>Pollutant formation depends on fuel chemistry and on the engine operating point, yet experiments on full-scale turbofans are expensive, logistically complex and tightly regulated. I use a micro-turbojet to measure those sensitivities under controlled conditions at a manageable cost. A reactor-network model from our collaborators helps explain them <span class="cite">[<a href="#ref-1">1</a>]</span>.</p>
         </div>
         <ol class="refs" style="margin-top:22px;">
           <li id="ref-1"><span class="rn">[1]</span><span>S. Sharma, D. Lieder, S. Saini, A. Kumar, P. Kirchen, J. Goeing and S. Rogak, “A micro-turbojet test rig to analyze the impact of jet fuels on emissions and performance,” <i>Proc. CSME International Congress / 33rd Annual Conf. CFD Society of Canada</i>, Vancouver, BC, May 2026, Paper 361. <a class="doi" href="publications.html">Publications →</a></span></li>
@@ -837,7 +840,7 @@ a.inline{color:var(--accent);border-bottom:1px solid currentColor}
 <figure class="plot "><a href="fig/setup-schematic.svg" data-view="img" data-title="Experimental setup"><img src="fig/setup-schematic.svg" alt="Experimental setup" loading="lazy"></a><figcaption><b>Experimental setup.</b> Engine, fuel metering and DAQ. An undiluted jet-core line goes to the ECOM analyzer. An ejector-diluted line feeds the gas analyzers, and a catalytic stripper ahead of the particle instruments.</figcaption></figure>
 <figure class="plot "><a href="fig/crn-framework.svg" data-view="img" data-title="CRN-based emissions prediction framework"><img src="fig/crn-framework.svg" alt="CRN-based emissions prediction framework" loading="lazy"></a><figcaption><b>CRN-based emissions prediction framework.</b> The aero-engine model sets the combustor-inlet and boundary states. A staged reactor network (primary, secondary, dilution zones) with finite-rate chemistry predicts EI and nvPM.</figcaption></figure>
 </div></div></section>
-<section class="sec" data-screen-label="Results figures"><div class="wrap"><div class="sec-head"><div class="eyebrow">Results</div><h2>What the measurements show</h2><p class="note">Each result is worked through, with its figures and uncertainties, on its project page.</p></div>
+<section class="sec" data-screen-label="Results figures"><div class="wrap"><div class="sec-head"><div class="eyebrow">Results</div><h2>What the measurements show</h2><p class="note">The project pages explain each result and its uncertainty alongside the supporting figures.</p></div>
 <div class="plot-grid">
 <figure class="plot span-2"><a href="fig/micro-vs-turbofan.svg" data-view="img" data-title="Micro-turbojet vs V2500 turbofan (Jet A-1)"><img src="fig/micro-vs-turbofan.svg" alt="Micro-turbojet vs V2500 turbofan (Jet A-1)" loading="lazy"></a><figcaption><b>Micro-turbojet vs V2500 turbofan (Jet A-1).</b> With rising thrust, CO falls and NOₓ rises in both the micro-turbojet data and the V2500 certification data. The absolute values differ. The certification data give no EI CO₂.</figcaption></figure>
 </div>
@@ -851,7 +854,7 @@ a.inline{color:var(--accent);border-bottom:1px solid currentColor}
 <li><b>Flame temperature.</b> The small combustor has a high surface-to-volume ratio and loses heat to its walls. Its peak flame temperature is lower, so it makes much less thermal (Zeldovich) NOₓ, which grows strongly with temperature.</li>
 <li><b>Efficiency and pressure ratio.</b> A large engine is far more efficient, with a maximum pressure ratio above 30, against about 4.</li>
 </ul>
-<p>I compare the direction of the trends. CO falls and NOₓ rises with thrust in both engines, and these shared trends are what the comparison is for.</p>
+<p>I compare how emissions change with thrust. CO falls and NOₓ rises in both engines.</p>
 </div>
 <div class="doc-grid" style="margin-top:28px;">
 <a class="doc" href="project-jetcalf.html"><span class="type">Fuel effects · JET-CALF</span><h3>FT-SPK vs Jet A-1, back to back</h3><p class="meta">GPPS test at maximum thrust: with FT-SPK, EI CO₂ −1.7%, EI NOₓ −4%, EI CO +0.5%, and soot mass −72% on a unit-density basis. Gravimetric TSFC fell by 5.3%.</p></a>
